@@ -1,0 +1,30 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo 'install test requirementss'
+      - python3 -m pip install pytest
+
+  pre_build:
+    commands:
+      - echo Nothing to do in the pre_build phase...
+
+  build:
+    commands:
+      - echo no build for python actually
+
+  post_build:
+    commands:
+      - echo Test the code with unit test
+      - bash ./unit_test.sh
+
+reports:
+  UnitTests:
+    files:
+      - 'pytest.xml'
+
+artifacts:
+  files:
+    - test-reports/pytest.xml
+  name: test-artifact.zip
