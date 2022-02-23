@@ -5,7 +5,8 @@ Date: 23/02/2022
 
 from utils.simple_math import (
     add,
-    multiply
+    multiply,
+    sub
 )
 
 
@@ -15,3 +16,7 @@ def test_add():
 
 def test_multiply():
     assert multiply(4, 5) == 20
+
+
+def test_sub():
+    assert sub(4, 5) == -1
