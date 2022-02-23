@@ -1,22 +1,28 @@
 version: 0.2
 
+env:
+  variables:
+    RED: "\033[0;31m"
+    GREEN: "\033[0;32m"
+    NC: "\033[0m"
+
 phases:
   install:
     commands:
-      - echo 'install test requirementss'
+      - echo "${GREEN}install test requirementss${NC}"
       - python3 -m pip install pytest
 
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase...
+      - echo "${GREEN}Nothing to do in the pre_build phase${NC}"
 
   build:
     commands:
-      - echo no build for python actually
+      - echo "${GREEN}no build for python actually${NC}"
 
   post_build:
     commands:
-      - echo Test the code with unit test
+      - echo "${GREEN}Test the code with unit test${NC}"
       - bash ./unit_test.sh
 
 reports:

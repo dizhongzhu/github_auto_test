@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 # run unit tests in virtualenv
 python3 -m pytest --verbose \
   --junitxml=test-reports/pytest.xml \
@@ -7,6 +8,6 @@ python3 -m pytest --verbose \
   --disable-warnings
 
 if [ $? -ne 0 ]; then
-  echo "unit tests failed"
+  echo -e " ${RED}unit tests failed${NC}"
   exit 1
 fi
