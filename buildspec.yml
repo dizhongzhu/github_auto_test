@@ -1,11 +1,11 @@
 version: 0.2
 
-env:
-  shell: bash
-  variables:
-    RED: "\033[0;31m"
-    GREEN: "\033[0;32m"
-    NC: "\033[0m"
+#env:
+#  shell: bash
+#  variables:
+#    RED: "\033[0;31m"
+#    GREEN: "\033[0;32m"
+#    NC: "\033[0m"
 
 phases:
   install:
