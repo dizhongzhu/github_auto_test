@@ -6,7 +6,8 @@ Date: 23/02/2022
 from utils.simple_math import (
     add,
     multiply,
-    sub
+    sub,
+    div
 )
 
 
@@ -20,3 +21,7 @@ def test_multiply():
 
 def test_sub():
     assert sub(4, 5) == -1
+
+
+def test_div():
+    assert div(4, 5) == 4/5
