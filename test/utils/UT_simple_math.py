@@ -24,4 +24,4 @@ def test_sub():
 
 
 def test_div():
-    assert div(4, 5) == 4 / 5
+    assert div(4, 5) == 0
