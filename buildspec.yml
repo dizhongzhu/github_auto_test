@@ -1,10 +1,15 @@
 version: 0.2
 
+env:
+  variables:
+    stage: "test"
+
 phases:
   install:
     runtime-versions:
       python: 3.8
     commands:
+      - echo "stage: ${stage}"
       - echo "======================> install test requirementss <======================"
       - python3 -m pip install pytest
 
