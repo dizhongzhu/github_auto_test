@@ -5,20 +5,20 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
-      - echo "\033[0;32m install test requirementss \033[0m"
+      - echo "======================> install test requirementss <======================"
       - python3 -m pip install pytest
 
   pre_build:
     commands:
-      - echo "\033[0;32m Nothing to do in the pre_build phase \033[0m"
+      - echo "======================> Nothing to do in the pre_build phase <======================"
 
   build:
     commands:
-      - echo "\033[0;32m no build for python actually \033[0m"
+      - echo "======================> no build for python actually <======================"
 
   post_build:
     commands:
-      - echo "\033[0;32m Test the code with unit test \033[0m"
+      - echo "======================> Test the code with unit test <======================"
       - bash ./unit_test.sh
 
 reports:
