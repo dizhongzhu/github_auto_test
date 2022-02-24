@@ -9,7 +9,7 @@ phases:
     runtime-versions:
       python: 3.8
     commands:
-      - echo "stage: ${stage}"
+      - echo "stage ${stage}"
       - echo "======================> install test requirementss <======================"
       - python3 -m pip install pytest
 
@@ -29,7 +29,7 @@ phases:
 reports:
   UnitTests:
     files:
-      - 'pytest.xml'
+      - 'test-reports/pytest.xml'
 
 artifacts:
   files:
