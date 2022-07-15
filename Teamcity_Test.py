@@ -12,8 +12,12 @@ if __name__ == '__main__':
     docker_folder = '/install_info'
 
     subprocess.check_call(
-        f'docker run -v {os.getcwd()}:{docker_folder} public.ecr.aws/sam/build-python{python_version} /bin/sh -c '
-        f'"ls -lFa  {docker_folder}; exit"')
+        f'docker run public.ecr.aws/sam/build-python{python_version} /bin/sh -c '
+        f'"ls -lFa  /; exit"')
+
+    # subprocess.check_call(
+    #     f'docker run -v {os.getcwd()}:{docker_folder} public.ecr.aws/sam/build-python{python_version} /bin/sh -c '
+    #     f'"ls -lFa  {docker_folder}; exit"')
 
     # # simulate the lambda environment by a docker
     # subprocess.check_call(
